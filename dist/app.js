@@ -81,12 +81,12 @@ function search() {
 function addnew() {
     var studentname = document.getElementById("studentname");
     var studentclass = document.getElementById("studentcalss");
-    if (!studentclass || !studentclass) {
+    if (!studentname || !studentclass) {
         return;
     }
     var newStudent = {
-        studentname: studentName.value,
-        "class": studentClass.value
+        studentname: studentname.value,
+        "class": studentclass.value
     };
     students.push(newStudent);
     console.log(students);

@@ -97,12 +97,12 @@ function addnew(){
     const studentname = document.getElementById("studentname");
     const studentclass =  document.getElementById("studentcalss");
 
-    if(!studentclass || !studentclass){
+    if(!studentname || !studentclass){
         return
     }
     const newStudent = {
-        studentname: studentName.value,
-        class: studentClass.value
+        studentname: studentname.value,
+        class: studentclass.value
     };
 
     students.push(newStudent);
