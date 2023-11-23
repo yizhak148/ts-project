@@ -1,6 +1,8 @@
 
 const Professions = document.getElementById("Professions")?.addEventListener("click", () => {alert(allProfessions)});
 
+const allstudent = document.getElementById("studens")?.addEventListener("click", () => {alert(students.map(student => `${student.studentname} - ${student.class}`).join("\n"))});
+
 const teachers = document.getElementById("Teachers")?.addEventListener("click", () =>
 alert("List of Teachers:\n" + allTeachers.map(teacher => `${teacher.teachername} - ${teacher.Professions}`).join("\n")));
 
@@ -73,8 +75,8 @@ let students:student[] = [
         class:"th3"
     },
     {
-        studentname: "",
-        class:""
+        studentname: "adi",
+        class:"th5"
     },
 ]
 
@@ -94,12 +96,14 @@ function search(){
 }
 
 function addnew(){
-    const studentname = document.getElementById("studentname");
-    const studentclass =  document.getElementById("studentcalss");
+
+    const studentname = document.getElementById("studentname") as HTMLInputElement;
+    const studentclass =  document.getElementById("studentcalss")  as HTMLInputElement;
 
     if(!studentname || !studentclass){
         return
     }
+   
     const newStudent = {
         studentname: studentname.value,
         class: studentclass.value
@@ -108,5 +112,4 @@ function addnew(){
     students.push(newStudent);
     console.log(students);
     
-
 }

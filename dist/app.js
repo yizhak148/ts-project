@@ -1,10 +1,11 @@
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 var Professions = (_a = document.getElementById("Professions")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () { alert(allProfessions); });
-var teachers = (_b = document.getElementById("Teachers")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function () {
+var allstudent = (_b = document.getElementById("studens")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function () { alert(students.map(function (student) { return student.studentname + " - " + student["class"]; }).join("\n")); });
+var teachers = (_c = document.getElementById("Teachers")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", function () {
     return alert("List of Teachers:\n" + allTeachers.map(function (teacher) { return teacher.teachername + " - " + teacher.Professions; }).join("\n"));
 });
-var btnsearch = (_c = document.getElementById("search")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", search);
-var btnaddnew = (_d = document.getElementById("addnew")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", addnew);
+var btnsearch = (_d = document.getElementById("search")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", search);
+var btnaddnew = (_e = document.getElementById("addnew")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", addnew);
 var allProfessions = [
     "math",
     "language",
@@ -59,8 +60,8 @@ var students = [
         "class": "th3"
     },
     {
-        studentname: "",
-        "class": ""
+        studentname: "adi",
+        "class": "th5"
     },
 ];
 function search() {
