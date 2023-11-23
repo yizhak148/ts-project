@@ -1,8 +1,13 @@
+var _a;
 console.log("conect");
-var Professions = [
-    "math", "language", "history", "Geography",
+var Professions = (_a = document.getElementById("Professions")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () { alert(allProfessions); });
+var allProfessions = [
+    "math",
+    "language",
+    "history",
+    "Geography",
 ];
-var Teachers = [
+var allTeachers = [
     {
         teachername: "gilad",
         Professions: "math"
@@ -34,16 +39,16 @@ var students = [
         "class": "th7"
     },
     {
-        studentname: "",
-        "class": ""
+        studentname: "adel",
+        "class": "th8"
     },
     {
-        studentname: "",
-        "class": ""
+        studentname: "oded",
+        "class": "th1"
     },
     {
-        studentname: "",
-        "class": ""
+        studentname: "harel",
+        "class": "th3"
     },
     {
         studentname: "",

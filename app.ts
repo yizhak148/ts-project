@@ -1,10 +1,16 @@
 console.log("conect");
 
-const Professions:string[] = [
-    "math", "language", "history", "Geography",
+const Professions = document.getElementById("Professions")?.addEventListener("click", () => {alert(allProfessions)});
+
+const allProfessions:string[] = [
+    "math",
+    "language",
+    "history",
+    "Geography",
+
 ]
 
-const Teachers:object[] = [
+const allTeachers:object[] = [
     {
         teachername: "gilad",
         Professions: "math"
@@ -37,16 +43,16 @@ let students = [
         class:"th7"
     },
     {
-        studentname: "",
-        class:""
+        studentname: "adel",
+        class:"th8"
     },
     {
-        studentname: "",
-        class:""
+        studentname: "oded",
+        class:"th1"
     },
     {
-        studentname: "",
-        class:""
+        studentname: "harel",
+        class:"th3"
     },
     {
         studentname: "",
