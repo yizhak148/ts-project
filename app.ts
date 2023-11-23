@@ -5,12 +5,16 @@ const teachers = document.getElementById("Teachers")?.addEventListener("click", 
 alert("List of Teachers:\n" + allTeachers.map(teacher => `${teacher.teachername} - ${teacher.Professions}`).join("\n")));
 
 const btnsearch = document.getElementById("search")?.addEventListener("click", search)
+const btnaddnew = document.getElementById("addnew")?.addEventListener("click", addnew)
 
 interface Teacher {
     teachername: string;
     Professions: string;
 }
-
+interface student {
+    studentname: string;
+    class:string;
+}
 
 const allProfessions:string[] = [
     "math",
@@ -39,7 +43,7 @@ const allTeachers:Teacher[] = [
     }
 ]
 
-let students = [
+let students:student[] = [
     {
         studentname: "bob",
         class:"th8"
@@ -87,4 +91,22 @@ function search(){
    } else {
     alert(`${inputValue} is not a students.`)
    }
+}
+
+function addnew(){
+    const studentname = document.getElementById("studentname");
+    const studentclass =  document.getElementById("studentcalss");
+
+    if(!studentclass || !studentclass){
+        return
+    }
+    const newStudent = {
+        studentname: studentName.value,
+        class: studentClass.value
+    };
+
+    students.push(newStudent);
+    console.log(students);
+    
+
 }
