@@ -1,7 +1,7 @@
 console.log("conect");
 
 const Professions = document.getElementById("Professions")?.addEventListener("click", () => {alert(allProfessions)});
-
+const btnsearch = document.getElementById("search")?.addEventListener("click", search)
 const allProfessions:string[] = [
     "math",
     "language",
@@ -60,6 +60,17 @@ let students = [
     },
 ]
 
-function addstudent (name:string, classnum:string){
-
+function search(){
+   const input = document.querySelector("input");
+   if(!input){
+    return
+   }
+    const inputValue = input.value.trim().toLocaleLowerCase();
+    const studentFound = students.find(student => student.studentname.toLowerCase() === inputValue);
+   if (studentFound) {
+      alert(`${inputValue} is a students. Class: ${studentFound.class}`);
+    return;
+   } else {
+    alert(`${inputValue} is not a students.`)
+   }
 }

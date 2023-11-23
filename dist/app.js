@@ -1,6 +1,7 @@
-var _a;
+var _a, _b;
 console.log("conect");
 var Professions = (_a = document.getElementById("Professions")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () { alert(allProfessions); });
+var btnsearch = (_b = document.getElementById("search")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", search);
 var allProfessions = [
     "math",
     "language",
@@ -55,5 +56,18 @@ var students = [
         "class": ""
     },
 ];
-function addstudent(name, classnum) {
+function search() {
+    var input = document.querySelector("input");
+    if (!input) {
+        return;
+    }
+    var inputValue = input.value.trim().toLocaleLowerCase();
+    var studentFound = students.find(function (student) { return student.studentname.toLowerCase() === inputValue; });
+    if (studentFound) {
+        alert(inputValue + " is a students. Class: " + studentFound["class"]);
+        return;
+    }
+    else {
+        alert(inputValue + " is not a students.");
+    }
 }
