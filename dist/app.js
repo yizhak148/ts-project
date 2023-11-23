@@ -1,7 +1,9 @@
-var _a, _b;
-console.log("conect");
+var _a, _b, _c;
 var Professions = (_a = document.getElementById("Professions")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () { alert(allProfessions); });
-var btnsearch = (_b = document.getElementById("search")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", search);
+var teachers = (_b = document.getElementById("Teachers")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function () {
+    return alert("List of Teachers:\n" + allTeachers.map(function (teacher) { return teacher.teachername + " - " + teacher.Professions; }).join("\n"));
+});
+var btnsearch = (_c = document.getElementById("search")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", search);
 var allProfessions = [
     "math",
     "language",
@@ -21,6 +23,10 @@ var allTeachers = [
         teachername: "eden",
         Professions: "history"
     },
+    {
+        teachername: "omry",
+        Professions: "language"
+    }
 ];
 var students = [
     {

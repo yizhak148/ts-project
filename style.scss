@@ -8,9 +8,7 @@ body, html{
     width: 100wh;
 }
 .warrper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    
 }
 header{
     background-color: purple;
@@ -22,4 +20,6 @@ header{
 }
 a {
     color: white;
+    font-size: 1.5rem;
 }
+

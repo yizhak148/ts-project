@@ -1,7 +1,17 @@
-console.log("conect");
 
 const Professions = document.getElementById("Professions")?.addEventListener("click", () => {alert(allProfessions)});
+
+const teachers = document.getElementById("Teachers")?.addEventListener("click", () =>
+alert("List of Teachers:\n" + allTeachers.map(teacher => `${teacher.teachername} - ${teacher.Professions}`).join("\n")));
+
 const btnsearch = document.getElementById("search")?.addEventListener("click", search)
+
+interface Teacher {
+    teachername: string;
+    Professions: string;
+}
+
+
 const allProfessions:string[] = [
     "math",
     "language",
@@ -10,7 +20,7 @@ const allProfessions:string[] = [
 
 ]
 
-const allTeachers:object[] = [
+const allTeachers:Teacher[] = [
     {
         teachername: "gilad",
         Professions: "math"
@@ -23,6 +33,10 @@ const allTeachers:object[] = [
         teachername: "eden",
         Professions: "history"
     },
+    {
+        teachername: "omry",
+        Professions: "language"
+    }
 ]
 
 let students = [
